@@ -1,0 +1,29 @@
+.subscribe-form__input {
+  width: 370px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #999999;
+  padding: 8px;
+  &:placeholder-shown {
+    color: #999999;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 9px;
+    border: 1px solid #d3d3d2;
+    border-radius: 5px;
+  }
+}
+
+.subscribe-form__button {
+  background: linear-gradient(0deg, #E74A35, #F26843);
+  box-shadow: 0 2px 2px rgba(172,16,0,0.64);
+  color: white;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  border: none;
+  border-radius: 49px;
+  width: 130px;
+  height: 46px;
+  cursor: pointer;
+}

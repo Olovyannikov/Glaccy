@@ -1,0 +1,46 @@
+.extra-info__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.extra-info__blog {
+  width: 560px;
+  background: url("../img/strawberry.png") no-repeat;
+}
+
+.extra-info__blog-heading {
+  padding-top: 20px;
+  padding-left: 20px;
+  font-size: 16px;
+  color: #323232;
+  margin: 0 0 10px;
+}
+
+.extra-info__blog-link {
+  font-size: 24px;
+  line-height: 30px;
+  color: #323232;
+  display: block;
+  max-width: 295px;
+  padding-left: 20px;
+  padding-bottom: 85px;
+}
+
+.extra-info__subscribe {
+  background: #f8f7f4;
+  border-radius: 20px;
+  background: url("../img/postback.png") no-repeat;
+  width: 560px;
+  color: #5a5a5a;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.extra-info__subscribe-text {
+  padding: 35px 20px 40px 24px;
+  margin: 0;
+}
+
+.extra-info__subscribe-form {
+  padding-left: 24px;
+}

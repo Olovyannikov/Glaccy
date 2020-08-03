@@ -1,0 +1,33 @@
+.info {
+  display: flex;
+  width: 310px;
+  justify-content: space-between;
+  font-size: 13px;
+  align-items: center;
+}
+
+.info__text {
+  position: relative;
+  &--heart::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: url("../img/heart.svg") center no-repeat;
+    width: 15px;
+    height: 13px;
+    left: -25px;
+    top: 2px;
+  }
+}
+
+.info__link {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #ffffff55;
+}
+
+.info__link-imp {
+  font-weight: bold;
+}

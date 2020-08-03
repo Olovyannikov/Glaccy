@@ -1,0 +1,46 @@
+.page-main {
+  margin-bottom: 40px;
+}
+
+.page-main__hit-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-main__hit {
+  position: relative;
+  max-width: 267px;
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 61px;
+    height: 61px;
+    top: 0;
+    left: 0;
+    background: url("../img/hit.png") no-repeat center;
+  }
+}
+
+.page-main__hit-price {
+  margin: 0;
+  font-size: 45px;
+  font-weight: 700;
+  text-shadow: 0.5px 0.9px 3px rgba(49,50,53,0.5);
+  position: absolute;
+  bottom: 90px;
+}
+
+.page-main__currency {
+  &::after {
+    content: '/кг';
+    font-size: 30px;
+    text-shadow: 0.5px 0.9px 3px rgba(49,50,53,0.5);
+  }
+}
+
+.page-main__hit-description {
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+}

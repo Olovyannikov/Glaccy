@@ -1,0 +1,60 @@
+.advantages {
+  background: url("../img/waffle.png");
+  min-height: 310px;
+  border-radius: 20px;
+  margin-bottom: 40px;
+}
+
+.advantages__heading {
+  color: #323232;
+  font-size: 24px;
+  padding-left: 20px;
+  padding-top: 30px;
+  width: 1020px;
+}
+
+.advantages__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.advantages__text {
+  color: #323232;
+  font-size: 16px;
+  line-height: 22px;
+  padding-left: 75px;
+  max-width: 560px;
+  box-sizing: border-box;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: '';
+    display: block;
+    background: url("../img/ice-cream.svg") center no-repeat;
+    width: 50px;
+    height: 50px;
+    left: 20px;
+    top: -20px;
+  }
+  &--self {
+    order: 1;
+  }
+  &--farm {
+    order: 2;
+    &::before {
+      background: url("../img/cow.svg") center no-repeat;
+    }
+  }
+  &--natural {
+    order: 3;
+    &::before {
+      background: url("../img/eco.svg") center no-repeat;
+    }
+  }
+  &--delivery {
+    order: 4;
+    &::before {
+      background: url("../img/thermometer.svg") center no-repeat;
+    }
+  }
+}
