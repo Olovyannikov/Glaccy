@@ -31,7 +31,8 @@
                     <li class="navigation__dropdown-item navigation__dropdown-item--news"><a href="#"
                                                                                              class="navigation__dropdown-link navigation__dropdown-link--news">
                       Новинки</a>  </li>
-                    <li class="navigation__dropdown-item"><a href="#" class="navigation__dropdown-link">Сливочное</a>
+                    <li class="navigation__dropdown-item"><a href="catalog.html" class="navigation__dropdown-link">Сливочное
+                    </a>
                     </li>
                     <li class="navigation__dropdown-item"><a href="#" class="navigation__dropdown-link">Щербеты</a></li>
                     <li class="navigation__dropdown-item"><a href="#" class="navigation__dropdown-link">Фруктовый лед</a>
@@ -53,12 +54,34 @@
                       height="17" viewBox="0 0 17 17"><path d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/></svg>
 
             </button>
+            <div class="layout layout--search">
+                <form action="#" class="layout__form">
+                    <div class="layout__wrapper layout__wrapper--search">
+                        <input type="search" class="layout__input layout__input--search" placeholder="Крем-брюле">
+                    </div>
+                </form>
+            </div>
             <button class="page-header__button page-header__button--enter">
                 <svg class="page-header__button--enter-item" xmlns="http://www.w3.org/2000/svg"
                      xmlns:xlink="http://www.w3.org/1999/xlink" width="21"
                       height="19" viewBox="0 0 21 19"><g><path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/><path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/></g></svg>
 
                 Вход</button>
+
+            <div class="layout layout--enter">
+                <form action="#" class="layout__form">
+                    <div class="layout__wrapper">
+                    <input type="email" class="layout__input" placeholder="email@example.com">
+                    <input type="password" class="layout__input" placeholder="********">
+                    <button class="layout__button" type="submit">Войти</button>
+                    <ul class="layout__list">
+                        <li class="layout__list-item"><a href="#" class="layout__link">Забыли пароль?</a></li>
+                        <li class="layout__list-item"><a href="#" class="layout__link">Новая регистрация</a></li>
+                    </ul>
+                    </div>
+                </form>
+            </div>
+
             <button class="page-header__button page-header__button--cart">
                 <svg class="page-header__button--cart-item" xmlns="http://www.w3.org/2000/svg" width="21" height="20"
                      viewBox="0 0 21 20"><g><path
@@ -118,37 +141,41 @@
 <main class="page-main">
     <div class="container">
         <div class="page-main__hit-container">
-            <div class="page-main__hit">
+            <div class="page-main__hit page-main__hit--orange">
                 <img src="img/1.png" alt="Tasty orange ice-cream" class="page-main__hit-image">
                 <p class="page-main__hit-price">
                 <span class="page-main__hit-cost">310</span><span class="page-main__currency">₽</span></p>
             <p class="page-main__hit-description">
                 Сливочное с апельсиновым джемом и цитрусовой стружкой
             </p>
+                <button class="page-main__hit-quickview page-main__hit-quickview--orange">Быстрый просмотр</button>
             </div>
-            <div class="page-main__hit">
+            <div class="page-main__hit page-main__hit--coffee">
                 <img src="img/2.png" alt="Tasty orange ice-cream" class="page-main__hit-image">
                 <p class="page-main__hit-price">
                 <span class="page-main__hit-cost">380</span><span class="page-main__currency">₽</span></p>
             <p class="page-main__hit-description">
                 Сливочно-кофейное с кусочками шоколада
             </p>
+                <button class="page-main__hit-quickview page-main__hit-quickview--coffee">Быстрый просмотр</button>
             </div>
-            <div class="page-main__hit">
+            <div class="page-main__hit page-main__hit--strawberry">
                 <img src="img/3.png" alt="Tasty orange ice-cream" class="page-main__hit-image">
                 <p class="page-main__hit-price">
                 <span class="page-main__hit-cost">355</span><span class="page-main__currency">₽</span></p>
             <p class="page-main__hit-description">
                 Сливочно-клубничное с присыпкой из белого шоколада
             </p>
+                <button class="page-main__hit-quickview page-main__hit-quickview--strawberry">Быстрый просмотр</button>
             </div>
-            <div class="page-main__hit">
+            <div class="page-main__hit page-main__hit--caramel">
                 <img src="img/4.png" alt="Tasty orange ice-cream" class="page-main__hit-image">
                 <p class="page-main__hit-price">
                 <span class="page-main__hit-cost">415</span><span class="page-main__currency">₽</span></p>
             <p class="page-main__hit-description">
                 Сливочное крем-брюле с карамельной подливкой
             </p>
+                <button class="page-main__hit-quickview page-main__hit-quickview--caramel">Быстрый просмотр</button>
             </div>
         </div>
         <section class="advantages">
@@ -202,7 +229,7 @@
                 <span class="page-footer__popup-address--item">8 812 450-25-25</span>
                 <span class="page-footer__popup-subtext">(с 10 до 20 ежедневно)</span>
             </p>
-            <button class="page-footer__popup-button">Форма обратной связи</button>
+            <button class="page-footer__popup-button js-open-modal" data-modal="1">Форма обратной связи</button>
         </div>
     </div>
     <div class="page-footer__wrapper container">
@@ -236,6 +263,27 @@
         </section>
     </div>
 </footer>
+
+
+<!-- Modal Box -->
+<div class="modal" data-modal="1">
+    <!--   Svg иконка для закрытия окна  -->
+    <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
+    <form action="#" class="modal__form">
+        <h3 class="modal__title">Мы обязательно вам ответим!</h3>
+        <div class="modal__wrapper">
+        <input type="text" class="modal__input" placeholder="Имя Фамилия">
+        <input type="email" class="modal__input" placeholder="email@example.com">
+        </div>
+            <textarea name="textarea" id="textarea" cols="30" rows="10" class="modal__textarea"
+                  placeholder="В свободной форме"></textarea>
+        <button type="submit" class="modal__button">Отправить</button>
+    </form>
+</div>
+
+<!-- Подложка под модальным окном -->
+<div class="overlay js-overlay-modal"></div>
+<!-- End of modal -->
 <script src="js/script.min.js"></script>
 </body>
 </html>

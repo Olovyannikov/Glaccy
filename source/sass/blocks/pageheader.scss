@@ -11,9 +11,10 @@
 .page-header__button-container {
   display: flex;
   justify-content: space-between;
-  width: 247px;
+  width: 267px;
   align-items: center;
   z-index: 2;
+  position: relative;
 }
 
 .page-header__button {
@@ -37,9 +38,23 @@
    padding: 10px 16px 10px 46px;
   }
   &--cart {
+    background-color: rgba(255,255,255,.2);
+    color: #fff;
     position: relative;
     padding: 10px 16px 10px 46px;
   }
+  &--cart-full {
+    background-color: #fff;
+    color: #222222;
+  }
+}
+
+.page-header__button--cart-full:hover + .layout--cart {
+  display: block;
+}
+
+.layout:hover > .layout--cart {
+  display: block;
 }
 
 .page-header__button--search-item {
@@ -164,4 +179,9 @@
   margin-bottom: 20px;
   cursor: pointer;
   z-index: 2;
+}
+
+.page-header__subinfo {
+  display: flex;
+  justify-content: space-between;
 }

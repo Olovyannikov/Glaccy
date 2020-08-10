@@ -10,6 +10,7 @@
 .page-main__hit {
   position: relative;
   max-width: 267px;
+  cursor: pointer;
   &::before {
     content: '';
     display: block;
@@ -22,13 +23,67 @@
   }
 }
 
+.page-main__hit-quickview {
+  display: none;
+  color: white;
+  border: none;
+  font-size: 18px;
+  line-height: 24px;
+  background: linear-gradient(0deg, #E74A35, #F26843);
+  border-radius: 49px;
+  cursor: pointer;
+  padding: 10px 15px;
+  width: 200px;
+  margin: 0 auto;
+}
+
+.page-main__hit--orange:hover {
+  background-color: rgba(255,255,255,.2);
+  border-radius: 6px;
+  padding: 6px 14px 20px;
+}
+
+.page-main__hit--orange:hover > .page-main__hit-quickview {
+  display: block;
+}
+
+.page-main__hit--coffee:hover {
+  background-color: rgba(255,255,255,.2);
+  border-radius: 6px;
+  padding: 6px 14px 20px;
+}
+
+.page-main__hit--coffee:hover > .page-main__hit-quickview {
+  display: block;
+}
+
+.page-main__hit--strawberry:hover {
+  background-color: rgba(255,255,255,.2);
+  border-radius: 6px;
+  padding: 6px 14px 20px;
+}
+
+.page-main__hit--strawberry:hover > .page-main__hit-quickview {
+  display: block;
+}
+
+.page-main__hit--caramel:hover {
+  background-color: rgba(255,255,255,.2);
+  border-radius: 6px;
+  padding: 6px 14px 20px;
+}
+
+.page-main__hit--caramel:hover > .page-main__hit-quickview {
+  display: block;
+}
+
 .page-main__hit-price {
   margin: 0;
   font-size: 45px;
   font-weight: 700;
   text-shadow: 0.5px 0.9px 3px rgba(49,50,53,0.5);
   position: absolute;
-  bottom: 90px;
+  top: 205px;
 }
 
 .page-main__currency {
@@ -43,4 +98,43 @@
   text-align: center;
   font-weight: 500;
   font-size: 16px;
+  text-decoration: underline;
+  opacity: .8;
+}
+
+//navigation
+
+.page-main__navigation-list {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  margin-top: 80px;
+  margin-bottom: 25px;
+}
+
+.page-main__navigation-back {
+  transform: rotate(180deg);
+}
+
+.page-main__navigation-link {
+  color: #FFFFFF;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: .2s;
+  &:hover {
+    background-color: rgba(255,255,255,.2);
+    padding: 4px 9px;
+    border-radius: 50%;
+    margin: 0 10px;
+  }
+  &--current {
+    padding: 4px 9px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #323232;
+    margin-right: 10px;
+  }
 }

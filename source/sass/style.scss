@@ -1,16 +1,18 @@
 @import "fonts.scss";
 @import "blocks/pageheader.scss";
 @import "blocks/pagefooter.scss";
+@import "blocks/pagemain.scss";
 @import "blocks/nav.scss";
 @import "blocks/slider.scss";
-@import "blocks/pagemain.scss";
 @import "blocks/advantages.scss";
 @import "blocks/extrainfo.scss";
 @import "blocks/subscribe.scss";
-@import "blocks/social.scss";
 @import "blocks/info.scss";
 @import "blocks/developer.scss";
-@import "blocks/pagefooter.scss";
+@import "blocks/modal.scss";
+@import "blocks/breadcrumbs.scss";
+@import "blocks/filter.scss";
+@import "blocks/social.scss";
 
 .body {
   margin: 0;
@@ -34,4 +36,129 @@
   padding: 0 27px;
   box-sizing: border-box;
   margin: 0 auto;
+}
+
+/* Стили для подложки */
+
+.overlay {
+
+  /* Скрываем подложку  */
+  opacity: 0;
+  visibility: hidden;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 20;
+  transition: .3s all;
+}
+
+
+/* Стили для модальных окон */
+
+.modal {
+  width: 430px;
+  /* Скрываем окна  */
+  opacity: 0;
+  visibility: hidden;
+
+  /*  Центрируем и задаем z-index */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30; /* Должен быть выше чем у подложки*/
+
+  /*  Побочные стили   */
+  box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2);
+  text-align: center;
+  padding-top: 20px;
+  padding-left: 18px;
+  border-radius: 6px;
+  background-color: #fff;
+  transition: 0.3s all;
+}
+
+.modal__title {
+  color: black;
+  text-align: left;
+  margin: 0 0 24px;
+  padding: 0;
+  width: 100%;
+}
+
+.modal__form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.modal__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 267px;
+}
+
+.modal__input,
+.modal__textarea{
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(178, 178, 178);
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  opacity: 0.52;
+  width: 271px;
+  min-height: 46px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  padding: 14px;
+}
+
+.modal__textarea {
+  width: 100%;
+  margin-right: 18px;
+  margin-bottom: 26px;
+  max-height: 155px;
+  font: inherit;
+}
+
+.modal__button {
+  margin-bottom: 24px;
+  margin-left: auto;
+  margin-right: 18px;
+  border: none;
+  color: #FFFFFF;
+  font-weight: bold;;
+  background-image: -moz-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
+  width: 139px;
+  height: 44px;
+  background: linear-gradient(0deg, #E74A35, #F26843);
+  border-radius: 49px;
+  cursor: pointer;
+}
+
+/* Стили для активных классов подложки и окна */
+
+.modal.active,
+.overlay.active{
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* Стили для кнопки закрытия */
+
+.modal__cross {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  fill: #444;
+  cursor: pointer;
 }
